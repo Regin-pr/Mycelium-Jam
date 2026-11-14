@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bu5og6qgsvioi"]
+
+[ext_resource type="Script" uid="uid://bchlfkyxon40a" path="res://dialogue/dictionary/vocab.gd" id="1_61wno"]
+
+[node name="Vocabulary" type="Node" unique_id=2146506193]
+script = ExtResource("1_61wno")

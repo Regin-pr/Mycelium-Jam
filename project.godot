@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Dialogic="*uid://ds2q0uclmolvu"
 Globals="*uid://cfp5sjf8q3m6x"
+Vocab="*uid://bu5og6qgsvioi"
 
 [dialogic]
 
@@ -35,11 +36,7 @@ glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
 variables={
-"eugenia_name": "???",
-"keyword1": "",
-"keyword2": "",
-"keyword3": "",
-"mike_name": "???"
+"Mike_Name": "Mike"
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
