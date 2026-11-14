@@ -24,18 +24,25 @@ Vocab="*uid://bu5og6qgsvioi"
 [dialogic]
 
 directories/dch_directory={
-"eugenia": "res://dialogue/chars/eugenia.dch",
+"Eugenia": "res://dialogue/chars/Eugenia.dch",
 "mike_2": "res://dialogue/chars/mike_2.dch",
 "mike_testing_traut": "res://dialogue/chars/mike_testing_traut.dch"
 }
 directories/dtl_directory={
-"test_timeline": "res://dialogue/test_timeline.dtl"
+"day_1": "res://dialogue/day_1.dtl",
+"test_timeline": "res://dialogue/timelines/test_timeline.dtl"
 }
 layout/style_directory={}
 glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
 variables={
+"Eugenia_Name": "???",
+"KEYWORDS": {
+"keyword1": "",
+"keyword2": "",
+"keyword3": ""
+},
 "Mike_Name": "Mike"
 }
 text/letter_speed=0.01

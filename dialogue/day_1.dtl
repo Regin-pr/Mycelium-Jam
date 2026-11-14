@@ -1,0 +1,39 @@
+#Scene 1\:
+#
+#context: mc meets an old friend of the host (Eugenia aka Gena), trying to catch up after host returned from their 6 years abroad
+#
+You see a frail-looking human frantically approaching you, seemingly intending to initiate "conversation".
+
+join Eugenia center
+
+Eugenia (surprised): Meade?[pause=0.5] Oh my God, *Meade*, is that you, choom?[pause=0.2] It's me, *Eugenia*! From *high school*, *remember*?
+
+set {Eugenia_Name} = "Eugenia"
+...
+
+Eugenia (looking_at_player): Have you been avoiding me or why haven't you come by *the café* to say *hi* to me in what feels like ages??? Here *I* was, thinking you died out there or something, *choom*! I was *worried about you*, you know?
+
+You aren't sure why, but for whatever reason you can understand every word that human is saying.
+
+Must be some leftover information that the language center of your host's brain miraculously kept active long enough for you to assimilate into the mycelium network.
+
+label FirstReply
+
+[b][i]You can NOT afford to be discovered, lest you want your short existence in human society to end prematurely, yet you don't quite know how to speak human language yet.[/i][/b]
+
+[b][i]Maybe you can use the words the human was saying to your advantage by memorizing them and then repeating them back to them…[/i][/b]
+
+(word scramble menu)
+- Pass
+
+Eugenia (surprised): Huh? What?
+
+jump FirstReply
+
+- if equal to or more than 50%
+
+Eugenia (looking_right): Ok so it seems like you do remember me, but not the *language* we're speaking…[pause=0.5][portrait_sitting_surprised] Did those *6 years abroad* really make you *forget* how to *speak* our language that much? I mean, *yes*, I *understand*, being in a foreign country for that long without speaking your native tongue might degrade your skills over time but yikes… [pause=1][portrait_sitting_smiling]I guess ol' *Gena* will have to refresh the *memories* trapped in that noggin of yours, choom!
+
+Eugenia (surprised): Dang, I need to hurry back to work, didn't realize I spent most of my break talking to you. [portrait_sitting_looking_right] I suppose I'll see you some other time, Meade?
+
+(word scramble menu) //this time scripted, you only have "yes", "Eugenia" and "Gena" as option

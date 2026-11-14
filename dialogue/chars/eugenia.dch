@@ -10,12 +10,49 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "",
+&"default_portrait": "looking_right",
 &"description": "",
-&"display_name": "Eugenia",
+&"display_name": "{Eugenia_Name}",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
-&"portraits": {},
+&"portraits": {
+"looking_at_player": {
+"export_overrides": {
+"image": "\"res://sprites/eugenia/Eugenia_looking_right.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"looking_right": {
+"export_overrides": {
+"image": "\"res://sprites/eugenia/Eugenia_looking_at_player.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"looking_right_mouth_open": {
+"export_overrides": {
+"image": "\"res://sprites/eugenia/Eugenia_looking_right_mouth_open.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"surprised": {
+"export_overrides": {
+"image": "\"res://sprites/eugenia/Eugenia_surprised.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
 &"scale": 1.0
 }
