@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://de3bwmc3f2i5n"]
 
-[ext_resource type="Script" uid="uid://ctuwilgao2tao" path="res://test_scene.gd" id="1_juvch"]
+[ext_resource type="Script" uid="uid://ctuwilgao2tao" path="res://scripts/test_scene.gd" id="1_uecpb"]
 
 [node name="Textbox" type="Node2D" unique_id=1386576985]
-script = ExtResource("1_juvch")
+script = ExtResource("1_uecpb")
 
 [node name="StealButton" type="Button" parent="." unique_id=399491111]
 unique_name_in_owner = true

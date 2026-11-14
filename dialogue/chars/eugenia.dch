@@ -10,22 +10,12 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "silhouette",
+&"default_portrait": "",
 &"description": "",
 &"display_name": "Eugenia",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
-&"portraits": {
-"silhouette": {
-"export_overrides": {
-"image": "\"res://dialogue/chars/mike.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-}
-},
+&"portraits": {},
 &"scale": 1.0
 }
