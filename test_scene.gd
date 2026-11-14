@@ -7,4 +7,9 @@ func _input(event: InputEvent):
 
 	if event is InputEventKey and event.keycode == KEY_ENTER and event.pressed:
 		Dialogic.start('test_timeline')
-		get_viewport().set_input_as_handled()
+		get_viewport().set_input_as_handled() 
+
+func _on_steal_button_toggled(toggled_on: bool) -> void:
+	if !toggled_on:
+		pass
+	

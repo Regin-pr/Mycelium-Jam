@@ -12,7 +12,7 @@
 },
 &"default_portrait": "portrait_standard",
 &"description": "Wants Waltuh to put his dick away",
-&"display_name": "Mike Ehrmantraut",
+&"display_name": "{mike_name}",
 &"mirror": false,
 &"nicknames": ["Mikey"],
 &"offset": Vector2(0, 0),

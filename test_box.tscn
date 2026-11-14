@@ -4,3 +4,15 @@
 
 [node name="Textbox" type="Node2D" unique_id=1386576985]
 script = ExtResource("1_juvch")
+
+[node name="StealButton" type="Button" parent="." unique_id=399491111]
+unique_name_in_owner = true
+offset_left = 43.0
+offset_top = 535.0
+offset_right = 93.0
+offset_bottom = 589.0
+toggle_mode = true
+text = "Steal 
+Word"
+
+[connection signal="toggled" from="StealButton" to="." method="_on_steal_button_toggled"]
