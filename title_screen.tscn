@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cvhmflq3ku860"]
+
+[ext_resource type="Script" uid="uid://b7ojsabvy0t6y" path="res://title_screen.gd" id="1_v6p8y"]
+
+[sub_resource type="Theme" id="Theme_8k57y"]
+
+[sub_resource type="SystemFont" id="SystemFont_pxwbp"]
+font_names = PackedStringArray("Carlito")
+font_italic = true
+
+[node name="TitleScreen" type="Control" unique_id=1121202072]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v6p8y")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=768734594]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=949373080]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1405989152]
+layout_mode = 2
+text = "Mushy Game"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1597851187]
+layout_mode = 2
+theme = SubResource("Theme_8k57y")
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = SubResource("SystemFont_pxwbp")
+theme_override_font_sizes/font_size = 32
+text = "Start"
+
+[node name="ContinueButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=253875221]
+layout_mode = 2
+text = "Continue"
+
+[node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1234177555]
+layout_mode = 2
+text = "Options"
+
+[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2084050070]
+layout_mode = 2
+text = "Exit
+"
