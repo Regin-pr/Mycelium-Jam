@@ -1,7 +1,7 @@
-#Scene 1\:
-#
-#context: mc meets an old friend of the host (Eugenia aka Gena), trying to catch up after host returned from their 6 years abroad
-#
+# #Scene 1\:
+# #
+# #context: mc meets an old friend of the host (Eugenia aka Gena), trying to catch up after host returned from their 6 years abroad
+# #
 You see a frail-looking human frantically approaching you, seemingly intending to initiate "conversation".
 
 join Eugenia center
@@ -24,13 +24,13 @@ label FirstReply
 [b][i]Maybe you can use the words the human was saying to your advantage by memorizing them and then repeating them back to them…[/i][/b]
 
 (word scramble menu)
-- Pass
-
-Eugenia (surprised): Huh? What?
-
-jump FirstReply
-
-- if equal to or more than 50%
+[signal arg="scramble_01"]
+[wait_input]
+if {Sentence_Value} < 5.0:
+	
+	Eugenia (surprised): Huh? What?
+	
+	jump FirstReply
 
 Eugenia (looking_right): Ok so it seems like you do remember me, but not the *language* we're speaking…[pause=0.5][portrait_sitting_surprised] Did those *6 years abroad* really make you *forget* how to *speak* our language that much? I mean, *yes*, I *understand*, being in a foreign country for that long without speaking your native tongue might degrade your skills over time but yikes… [pause=1][portrait_sitting_smiling]I guess ol' *Gena* will have to refresh the *memories* trapped in that noggin of yours, choom!
 

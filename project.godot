@@ -37,13 +37,15 @@ glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
 variables={
+"Eugenia_Happiness": 0,
 "Eugenia_Name": "???",
 "KEYWORDS": {
 "keyword1": "",
 "keyword2": "",
 "keyword3": ""
 },
-"Mike_Name": "Mike"
+"Mike_Name": "Mike",
+"Sentence_Value": 0
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true

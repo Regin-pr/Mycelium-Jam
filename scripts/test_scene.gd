@@ -1,5 +1,8 @@
 extends Node2D
 
+func _ready() -> void:
+	Dialogic.signal_event.connect(receive_signal)
+
 func _input(event: InputEvent):
 	# check if a dialog is already running
 	if Dialogic.current_timeline != null:
@@ -12,4 +15,9 @@ func _input(event: InputEvent):
 func _on_steal_button_toggled(toggled_on: bool) -> void:
 	if !toggled_on:
 		pass
-	
+
+func receive_signal(argument : String):
+	match argument:
+		"scramble_01":
+			var sc01 = preload("res://scenes/word_scramble_menu.tscn").instantiate()
+			add_child(sc01)
