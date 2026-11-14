@@ -30,7 +30,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "day_1": "res://dialogue/day_1.dtl",
-"test_timeline": "res://dialogue/timelines/test_timeline.dtl"
+"timelines/test_timeline": "res://dialogue/timelines/test_timeline.dtl"
 }
 layout/style_directory={}
 glossary/default_case_sensitive=true
