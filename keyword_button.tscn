@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b2kj3d6wxr4l8"]
+
+[sub_resource type="SystemFont" id="SystemFont_2y8ag"]
+font_names = PackedStringArray("Carlito")
+
+[node name="KeywordButton" type="Button" unique_id=137107906]
+theme_override_fonts/font = SubResource("SystemFont_2y8ag")
+theme_override_font_sizes/font_size = 36
