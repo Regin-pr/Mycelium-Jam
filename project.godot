@@ -32,6 +32,7 @@ directories/dch_directory={
 "mike_testing_traut": "res://dialogue/chars/mike_testing_traut.dch"
 }
 directories/dtl_directory={
+"day_0": "res://dialogue/day_0.dtl",
 "day_1": "res://dialogue/day_1.dtl",
 "day_2": "res://dialogue/day_2.dtl",
 "timelines/test_timeline": "res://dialogue/timelines/test_timeline.dtl"

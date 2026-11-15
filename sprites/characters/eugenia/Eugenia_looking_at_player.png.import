@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxdijl4iggxco"
-path="res://.godot/imported/Ayanda_eyes_closed.png-2c14467baf690c4024c19bc4e94b2031.ctex"
+uid="uid://tuainohgc2us"
+path="res://.godot/imported/Eugenia_looking_at_player.png-2c70ade7ebf93529298b5823374c583e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ayanda/Ayanda_eyes_closed.png"
-dest_files=["res://.godot/imported/Ayanda_eyes_closed.png-2c14467baf690c4024c19bc4e94b2031.ctex"]
+source_file="res://sprites/characters/eugenia/Eugenia_looking_at_player.png"
+dest_files=["res://.godot/imported/Eugenia_looking_at_player.png-2c70ade7ebf93529298b5823374c583e.ctex"]
 
 [params]
 

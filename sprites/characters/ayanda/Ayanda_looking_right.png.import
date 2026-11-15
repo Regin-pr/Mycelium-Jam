@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hlu7m8ho0fnn"
-path="res://.godot/imported/Yeo-Ji_open_mouth.png-fa0eb5097845fe8c5b4f72ad6740b458.ctex"
+uid="uid://cinfrpeigjl2k"
+path="res://.godot/imported/Ayanda_looking_right.png-c01f460ca26a86b7c34546fad6eb0374.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/yeo-ji/Yeo-Ji_open_mouth.png"
-dest_files=["res://.godot/imported/Yeo-Ji_open_mouth.png-fa0eb5097845fe8c5b4f72ad6740b458.ctex"]
+source_file="res://sprites/characters/ayanda/Ayanda_looking_right.png"
+dest_files=["res://.godot/imported/Ayanda_looking_right.png-c01f460ca26a86b7c34546fad6eb0374.ctex"]
 
 [params]
 

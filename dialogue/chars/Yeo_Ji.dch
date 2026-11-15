@@ -19,7 +19,7 @@
 &"portraits": {
 "Closed Mouth": {
 "export_overrides": {
-"image": "\"res://sprites/yeo-ji/Yeo-Ji_closed_mouth.png\""
+"image": "\"res://sprites/characters/yeo-ji/Yeo-Ji_closed_mouth.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -28,7 +28,7 @@
 },
 "Open Mouth": {
 "export_overrides": {
-"image": "\"res://sprites/yeo-ji/Yeo-Ji_open_mouth.png\""
+"image": "\"res://sprites/characters/yeo-ji/Yeo-Ji_open_mouth.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

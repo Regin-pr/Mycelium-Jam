@@ -3,11 +3,16 @@ extends Node
 var words = ["Meade", "Eugenia", "high school", "remember", "the café", "hi", 
 			"I", "choom", "worried about you"]
 var eugenia_likes = ["Eugenia", "high school", "remember", "choom"]
-var yeo_ji_likes = ["the café"]
+var yeo_ji_likes = ["work", "excuse", "yes", "understand", "worried about you"]
 var chrys_likes = ["hi"]
 var ayanda_likes = ["understand", "language"]
-
 var characters_liked_words
+
+var eugenia_dislikes
+var yeo_ji_dislikes = ["choom", "Eugenia", "Gena", "Meade"]
+var chrys_dislikes
+var ayanda_dislikes
+var characters_disliked_words
 
 # 5 words, two have to be to her liking to get max points (10)
 # ___ ___ ___ ___ ___
@@ -19,6 +24,8 @@ var characters_liked_words
 func _ready() -> void:
 	# Hard-coded character preferences, is referenced when a word scramble menu is opened
 	characters_liked_words = [eugenia_likes, yeo_ji_likes, chrys_likes, ayanda_likes]
+	characters_disliked_words = [eugenia_dislikes, yeo_ji_dislikes, chrys_dislikes, ayanda_dislikes]
+
 
 func append(input: String) -> void:
 	words.append(input)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djj5sfc4nytk8"
-path="res://.godot/imported/Chrys_shocked.png-4abda1ec40bda7ee07ec60b166afa358.ctex"
+uid="uid://j1xld3glknbv"
+path="res://.godot/imported/Eugenia_looking_right.png-aeef208466115fe774e13e896dd59db0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/chrys/Chrys_shocked.png"
-dest_files=["res://.godot/imported/Chrys_shocked.png-4abda1ec40bda7ee07ec60b166afa358.ctex"]
+source_file="res://sprites/characters/eugenia/Eugenia_looking_right.png"
+dest_files=["res://.godot/imported/Eugenia_looking_right.png-aeef208466115fe774e13e896dd59db0.ctex"]
 
 [params]
 

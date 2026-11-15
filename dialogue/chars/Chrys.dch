@@ -19,7 +19,7 @@
 &"portraits": {
 "Looking At Player": {
 "export_overrides": {
-"image": "\"res://sprites/chrys/Chrys_looking_at_player.png\""
+"image": "\"res://sprites/characters/chrys/Chrys_looking_at_player.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -28,7 +28,7 @@
 },
 "Looking Right": {
 "export_overrides": {
-"image": "\"res://sprites/chrys/Chrys_looking_right.png\""
+"image": "\"res://sprites/characters/chrys/Chrys_looking_right.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -37,7 +37,7 @@
 },
 "Mouth Open": {
 "export_overrides": {
-"image": "\"res://sprites/chrys/Chrys_mouth_open.png\""
+"image": "\"res://sprites/characters/chrys/Chrys_mouth_open.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -46,7 +46,7 @@
 },
 "Shocked": {
 "export_overrides": {
-"image": "\"res://sprites/chrys/Chrys_shocked.png\""
+"image": "\"res://sprites/characters/chrys/Chrys_shocked.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr8igo1we8usk"
-path="res://.godot/imported/Chrys_looking_right.png-30fa4c13930194c228a980a277823c6a.ctex"
+uid="uid://ckd4idgivwrok"
+path="res://.godot/imported/Ayanda_looking_at_player.png-902338db4fe80d580baa9fd1ab91ac98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/chrys/Chrys_looking_right.png"
-dest_files=["res://.godot/imported/Chrys_looking_right.png-30fa4c13930194c228a980a277823c6a.ctex"]
+source_file="res://sprites/characters/ayanda/Ayanda_looking_at_player.png"
+dest_files=["res://.godot/imported/Ayanda_looking_at_player.png-902338db4fe80d580baa9fd1ab91ac98.ctex"]
 
 [params]
 
