@@ -7,12 +7,12 @@ You see a frail-looking human frantically approaching you, seemingly intending t
 
 join Eugenia center
 
-Eugenia (surprised): Meade?[pause=0.5] Oh my God, *Meade*, is that you, choom?[pause=0.2] It's me, *Eugenia*! From *high school*, *remember*?
+Eugenia (surprised): Meade?[pause=0.5] Oh my God, [color=FIREBRICK][i]Meade[/i][/color], is that you, choom?[pause=0.2] It's me, [color=FIREBRICK][i]Eugenia[/i][/color]! From [color=FIREBRICK][i]high school[/i][/color], [color=FIREBRICK][i]remember[/i][/color]?
 
 set {Eugenia_Name} = "Eugenia"
 ...
 
-Eugenia (looking_at_player): Have you been avoiding me or why haven't you come by *the café* to say *hi* to me in what feels like ages??? Here *I* was, thinking you died out there or something, *choom*! I was *worried about you*, you know?
+Eugenia (looking_at_player): Have you been avoiding me or why haven't you come by [color=FIREBRICK][i]the café[/i][/color] to say [color=FIREBRICK][i]hi[/i][/color] to me in what feels like ages??? Here [color=FIREBRICK][i]I[/i][/color] was, thinking you died out there or something, [color=FIREBRICK][i]choom[/i][/color]! I was [color=FIREBRICK][i]worried about you[color=FIREBRICK][i], you know?
 
 You aren't sure why, but for whatever reason you can understand every word that human is saying.
 
@@ -39,9 +39,11 @@ set {Scores.Eugenia_Score} = {Scores.Eugenia_Score} + max(10,{Sentence_Score})
 set {Sentence_Score} = 0
 
 
-Eugenia (looking_right): Ok so it seems like you do remember me, but not the *language* we're speaking…[pause=0.5]
-Eugenia (surprised): Did those *6 years abroad* really make you *forget* how to *speak* our language that much? I mean, *yes*, I *understand*, being in a foreign country for that long without speaking your native tongue might degrade your skills over time but yikes… [pause=1]
-Eugenia (looking_at_player): I guess ol' *Gena* will have to refresh the *memories* trapped in that noggin of yours, choom!
+Eugenia (looking_right): Ok so it seems like you do remember me, but not the [color=FIREBRICK][i]language[/i][/color] we're speaking…[pause=0.5]
+[signal arg="steal_appear"]
+
+Eugenia (surprised): Did those [color=FIREBRICK][i]6 years abroad[color=FIREBRICK][i] really make you [color=FIREBRICK][i]forget[color=FIREBRICK][i] how to [color=FIREBRICK][i]speak[color=FIREBRICK][i] our language that much? I mean, [color=FIREBRICK][i]yes[color=FIREBRICK][i], I [color=FIREBRICK][i]understand[/i][/color], being in a foreign country for that long without speaking your native tongue might degrade your skills over time but yikes… [pause=1]
+Eugenia (looking_at_player): I guess ol' [color=FIREBRICK][i]Gena[/i][/color] will have to refresh the [color=FIREBRICK][i]memories[/i][/color] trapped in that noggin of yours, choom!
 
 Eugenia (surprised): Dang, I need to hurry back to work, didn't realize I spent most of my break talking to you.
 Eugenia (looking_right): I suppose I'll see you some other time, Meade?
@@ -49,3 +51,4 @@ Eugenia (looking_right): I suppose I'll see you some other time, Meade?
 (word scramble menu) //this time scripted, you only have "yes", "Eugenia" and "Gena" as option
 
 set {Scores.Total_Score} = {Scores.Total_Score} + {Scores.Eugenia_Score}
+[signal arg="scene_2_trans"]

@@ -33,6 +33,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "day_1": "res://dialogue/day_1.dtl",
+"day_2": "res://dialogue/day_2.dtl",
 "timelines/test_timeline": "res://dialogue/timelines/test_timeline.dtl"
 }
 layout/style_directory={}

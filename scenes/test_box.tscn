@@ -2,6 +2,45 @@
 
 [ext_resource type="Script" uid="uid://ctuwilgao2tao" path="res://scripts/test_scene.gd" id="1_uecpb"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2y8ag"]
+
+[sub_resource type="Animation" id="Animation_uecpb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_raltb"]
+resource_name = "show_day"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.46666667, 2.4, 3.2333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gsqoq"]
+_data = {
+&"RESET": SubResource("Animation_uecpb"),
+&"show_day": SubResource("Animation_raltb")
+}
+
 [node name="Textbox" type="Control" unique_id=1835139193]
 layout_mode = 3
 anchors_preset = 15
@@ -22,7 +61,73 @@ offset_top = 564.0
 offset_right = 81.0
 offset_bottom = 618.0
 toggle_mode = true
-text = "Steal 
+text = "Memorize 
 Word"
+
+[node name="StealPopup" type="MarginContainer" parent="Canvas" unique_id=1019354434]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 160
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_right = 160
+theme_override_constants/margin_bottom = 200
+
+[node name="ColorRect" type="ColorRect" parent="Canvas/StealPopup" unique_id=667285305]
+layout_mode = 2
+color = Color(0.51, 0.51, 0.51, 0.85882354)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Canvas/StealPopup" unique_id=2027917333]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Canvas/StealPopup/VBoxContainer" unique_id=1649726987]
+layout_mode = 2
+text = "Memorize any keyphrases?"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Canvas/StealPopup/VBoxContainer" unique_id=167492924]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2y8ag")
+
+[node name="WordContainer" type="HFlowContainer" parent="Canvas/StealPopup/VBoxContainer/PanelContainer" unique_id=529554880]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+last_wrap_alignment = 2
+
+[node name="Button" type="Button" parent="Canvas/StealPopup/VBoxContainer/PanelContainer/WordContainer" unique_id=935907574]
+layout_mode = 2
+text = "HIII"
+
+[node name="Button2" type="Button" parent="Canvas/StealPopup/VBoxContainer/PanelContainer/WordContainer" unique_id=212161390]
+layout_mode = 2
+text = "HIII"
+
+[node name="Button3" type="Button" parent="Canvas/StealPopup/VBoxContainer/PanelContainer/WordContainer" unique_id=105127856]
+layout_mode = 2
+text = "HIII"
+
+[node name="Label2" type="Label" parent="Canvas/StealPopup/VBoxContainer" unique_id=1672464795]
+layout_mode = 2
+text = "Words left for today: "
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2136676682]
+root_node = NodePath("../DayLabel")
+libraries/ = SubResource("AnimationLibrary_gsqoq")
+
+[node name="DayLabel" type="Label" parent="." unique_id=298312342]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 45.0
+offset_top = 28.0
+offset_right = 88.0
+offset_bottom = 51.0
+theme_override_font_sizes/font_size = 36
+text = "Day 1"
 
 [connection signal="toggled" from="Canvas/StealButton" to="." method="_on_steal_button_toggled"]
