@@ -8,13 +8,13 @@
 "sound_mood_default": "",
 "sound_moods": {
 "Mood 1": {
-"mode": 0,
+"mode": 1,
 "name": "Mood 1",
 "pitch_base": 1.0,
 "pitch_variance": 0.1,
 "skip_characters": 0.0,
 "sound_path": "res://audio/char_sounds/eugenia/",
-"volume_base": 0.0,
+"volume_base": -9.0,
 "volume_variance": 0.0
 }
 },
@@ -35,7 +35,8 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "Mood 1"
 },
 "looking_right": {
 "export_overrides": {
@@ -44,7 +45,8 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "Mood 1"
 },
 "looking_right_mouth_open": {
 "export_overrides": {
@@ -53,7 +55,8 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "",
+"sound_mood": "Mood 1"
 },
 "surprised": {
 "export_overrides": {
@@ -62,7 +65,8 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1.0,
-"scene": ""
+"scene": "",
+"sound_mood": "Mood 1"
 }
 },
 &"scale": 1.5
