@@ -24,7 +24,10 @@ Vocab="*uid://bu5og6qgsvioi"
 [dialogic]
 
 directories/dch_directory={
+"Ayanda": "res://dialogue/chars/Ayanda.dch",
+"Chrys": "res://dialogue/chars/Chrys.dch",
 "Eugenia": "res://dialogue/chars/Eugenia.dch",
+"Yeo_Ji": "res://dialogue/chars/Yeo_Ji.dch",
 "mike_2": "res://dialogue/chars/mike_2.dch",
 "mike_testing_traut": "res://dialogue/chars/mike_testing_traut.dch"
 }
@@ -37,15 +40,24 @@ glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
 variables={
-"Eugenia_Happiness": 0,
+"Ayanda_Name": "???",
+"Chrys_Name": "???",
 "Eugenia_Name": "???",
 "KEYWORDS": {
 "keyword1": "",
 "keyword2": "",
 "keyword3": ""
 },
-"Mike_Name": "Mike",
-"Sentence_Value": 0
+"Mike_Name": "???",
+"Scores": {
+"Ayanda_Score": 0,
+"Chrys_Score": 0,
+"Eugenia_Score": 0,
+"Total_Score": 0,
+"Yeo_Ji_Score": 0
+},
+"Sentence_Score": 0,
+"Yeo_Ji_Name": "???"
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true

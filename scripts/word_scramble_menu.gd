@@ -8,7 +8,14 @@ var default_text = "                 "
 var chunk_amount = 5
 var chunk_buttons : Array
 
+var character_liked_words : Array
+
 func _ready() -> void:
+	## CODE TO REPLACE FOR EACH WINDOW
+	chunk_amount = 5
+	character_liked_words = Vocab.characters_liked_words[0]
+
+	
 	instantiate_available_keyword_buttons()
 	instantiate_sentence_chunk_buttons()
 
@@ -47,20 +54,22 @@ func _on_chunkword_button_pressed(cb : KeywordButton):
 
 func _on_submit_button_pressed() -> void:
 	if check_sentence_completed():
-		queue_free()
+		resume_timeline()
 	else:
 		print("Sentence not fully formed yet!")
 	
 func check_sentence_completed() -> bool:
-	for button in chunk_buttons:
-		if button.get_keyword() == default_text:
+	for chunk in chunk_buttons:
+		if chunk.get_keyword() == default_text:
 			final_sentence = ""
 			return false # WRONG!!! Try again
 			
-		#for word in Vocab.eugenia_likes:
-			#if word == button.text:
-				## add 5 points
-		final_sentence += button.text # If valid
+		for word in character_liked_words:
+			if word == chunk.get_keyword():
+				Dialogic.VAR.Sentence_Score += 5
+		final_sentence += chunk.get_keyword() # If valid
+		
+	print(Dialogic.VAR.Sentence_Score)
 	return true # Yay
 
 func _on_reset_button_pressed() -> void:
@@ -68,3 +77,8 @@ func _on_reset_button_pressed() -> void:
 		word.button.flat = false
 	for button in chunk_buttons:
 		button.set_chunkword(default_text)
+
+func resume_timeline():
+	Dialogic.paused = false
+	Dialogic.Text.show_textbox()
+	queue_free()

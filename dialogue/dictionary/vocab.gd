@@ -3,6 +3,11 @@ extends Node
 var words = ["Meade", "Eugenia", "high school", "remember", "the café", "hi", 
 			"I", "choom", "worried about you"]
 var eugenia_likes = ["Eugenia", "high school", "remember", "choom"]
+var yeo_ji_likes = ["the café"]
+var chrys_likes = ["hi"]
+var ayanda_likes = ["understand", "language"]
+
+var characters_liked_words
 
 # 5 words, two have to be to her liking to get max points (10)
 # ___ ___ ___ ___ ___
@@ -12,7 +17,8 @@ var eugenia_likes = ["Eugenia", "high school", "remember", "choom"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	# Hard-coded character preferences, is referenced when a word scramble menu is opened
+	characters_liked_words = [eugenia_likes, yeo_ji_likes, chrys_likes, ayanda_likes]
 
 func append(input: String) -> void:
 	words.append(input)

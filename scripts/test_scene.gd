@@ -8,7 +8,7 @@ func _input(event: InputEvent):
 	if Dialogic.current_timeline != null:
 		return
 
-	if event is InputEventKey and event.keycode == KEY_ENTER and event.pressed:
+	if event is InputEventKey and event.is_action_pressed("text_advance"):
 		Dialogic.start('day_1')
 		get_viewport().set_input_as_handled() 
 
@@ -19,5 +19,7 @@ func _on_steal_button_toggled(toggled_on: bool) -> void:
 func receive_signal(argument : String):
 	match argument:
 		"scramble_01":
+			Dialogic.Text.hide_textbox()
+			Dialogic.paused = true
 			var sc01 = preload("res://scenes/word_scramble_menu.tscn").instantiate()
 			%Canvas.add_child(sc01)

@@ -23,16 +23,29 @@ label FirstReply
 [b][i]You can NOT afford to be discovered, lest you want your short existence in human society to end prematurely, yet you don't quite know how to speak human language yet.[/i][/b]
 
 [b][i]Maybe you can use the words the human was saying to your advantage by memorizing them and then repeating them back to them…[/i][/b]
+
 [signal arg="scramble_01"]
-[wait_input]
-if {Sentence_Value} < 5.0:
+
+
+if {Sentence_Score} < 5.0:
 	
 	Eugenia (surprised): Huh? What?
 	
 	jump FirstReply
+elif {Sentence_Score} > 10.0:
+	set {Sentence_Score} = 10.0
 
-Eugenia (looking_right): Ok so it seems like you do remember me, but not the *language* we're speaking…[pause=0.5][portrait_sitting_surprised] Did those *6 years abroad* really make you *forget* how to *speak* our language that much? I mean, *yes*, I *understand*, being in a foreign country for that long without speaking your native tongue might degrade your skills over time but yikes… [pause=1][portrait_sitting_smiling]I guess ol' *Gena* will have to refresh the *memories* trapped in that noggin of yours, choom!
+set {Scores.Eugenia_Score} = {Scores.Eugenia_Score} + max(10,{Sentence_Score})
+set {Sentence_Score} = 0
 
-Eugenia (surprised): Dang, I need to hurry back to work, didn't realize I spent most of my break talking to you. [portrait_sitting_looking_right] I suppose I'll see you some other time, Meade?
+
+Eugenia (looking_right): Ok so it seems like you do remember me, but not the *language* we're speaking…[pause=0.5]
+Eugenia (surprised): Did those *6 years abroad* really make you *forget* how to *speak* our language that much? I mean, *yes*, I *understand*, being in a foreign country for that long without speaking your native tongue might degrade your skills over time but yikes… [pause=1]
+Eugenia (looking_at_player): I guess ol' *Gena* will have to refresh the *memories* trapped in that noggin of yours, choom!
+
+Eugenia (surprised): Dang, I need to hurry back to work, didn't realize I spent most of my break talking to you.
+Eugenia (looking_right): I suppose I'll see you some other time, Meade?
 
 (word scramble menu) //this time scripted, you only have "yes", "Eugenia" and "Gena" as option
+
+set {Scores.Total_Score} = {Scores.Total_Score} + {Scores.Eugenia_Score}

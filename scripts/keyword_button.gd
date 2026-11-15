@@ -6,10 +6,8 @@ class_name KeywordButton
 
 func get_keyword() -> String:
 	var keyword : String = label.text
-	print("Old: " + keyword)
 	keyword = keyword.trim_prefix("[u][i]   ")
 	keyword = keyword.trim_suffix("   [/i][/u]")
-	print("New: " + keyword)
 	return keyword
 
 func set_keyword(new_text : String):
