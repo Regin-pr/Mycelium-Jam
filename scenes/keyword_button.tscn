@@ -12,10 +12,18 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_u81r1")
 
+[node name="KeywordButton" type="Button" parent="." unique_id=137107906]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = SubResource("SystemFont_2y8ag")
+theme_override_font_sizes/font_size = 36
+
 [node name="Label" type="RichTextLabel" parent="." unique_id=561795584]
 unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 bbcode_enabled = true
 text = "woah"
 fit_content = true
@@ -23,10 +31,3 @@ scroll_active = false
 autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="KeywordButton" type="Button" parent="." unique_id=137107906]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_fonts/font = SubResource("SystemFont_2y8ag")
-theme_override_font_sizes/font_size = 36

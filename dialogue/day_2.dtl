@@ -1,4 +1,5 @@
-[background arg="res://sprites/backgrounds/_1/BG_Home_night.png" fade="0.0"]
+[background arg="res://sprites/backgrounds/_1/BG_Home_night.png" fade="2.5"]
+audio music "res://audio/atmos/atmos_nature.mp3" [fade="2.5" volume="-17.0"]
 
 
 Your body shudders awake, disturbed by an agonizingly shrill sound coming from a rectangular box that has been sitting in a pouch on your leg. Desperately wanting the noise to come to a stop, you fish out the object from your pouch with your limbs. Said object glows with a blindingly bright light, showing a picture of a person and two crescent-shaped symbols, one green, the other red.
@@ -18,7 +19,8 @@ The device emits one final sound before shutting off and going dark, only leavin
 
 …Begrudgingly, you start moving towards "work".
 
-[background arg="res://sprites/backgrounds/_1/BG_Yeoji_1.png" fade="0.0"]
+[background arg="res://sprites/backgrounds/_1/BG_Yeoji_1.png" fade="2.5"]
+audio music "res://audio/atmos/atmos_bus.mp3" [fade="2.5" volume="-7.0"]
 
 join Yeo_Ji center
 

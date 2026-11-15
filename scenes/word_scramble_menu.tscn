@@ -17,6 +17,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_37lb8")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1297646713]
+modulate = Color(1, 1, 1, 0.3529412)
+position = Vector2(558.00006, 279)
+scale = Vector2(1.26, 1.26)
+texture = ExtResource("2_5qa5a")
+
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1710634428]
 layout_mode = 1
 anchors_preset = 15

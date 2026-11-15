@@ -51,7 +51,6 @@ Eugenia (looking_at_player): I guess ol' [color=FIREBRICK][i]Gena[/i][/color] wi
 Eugenia (surprised): Dang, I need to hurry back to work, didn't realize I spent most of my break talking to you.
 Eugenia (looking_right): I suppose I'll see you some other time, Meade?
 
-(word scramble menu) //this time scripted, you only have "yes", "Eugenia" and "Gena" as option
-
 set {Scores.Total_Score} = {Scores.Total_Score} + {Scores.Eugenia_Score}
+leave Eugenia
 [signal arg="scene_2_trans"]
