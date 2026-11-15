@@ -3,48 +3,47 @@ class_name WordScrambleMenu
 
 var words_available : Dictionary
 var final_sentence = ""
-var default_text = "_____"
+var default_text = "                 "
 
 var chunk_amount = 5
 var chunk_buttons : Array
 
 func _ready() -> void:
-	initiate_available_keyword_buttons()
-	initiate_sentence_chunk_buttons()
+	instantiate_available_keyword_buttons()
+	instantiate_sentence_chunk_buttons()
 
-
-func initiate_available_keyword_buttons():
+func instantiate_available_keyword_buttons():
 	for word in Vocab.words:
-		var kb = preload("res://scenes/keyword_button.tscn").instantiate()
+		var kb : KeywordButton = preload("res://scenes/keyword_button.tscn").instantiate()
 		%KeywordList.add_child(kb)
-		kb.text = word
-		kb.pressed.connect(_on_keyword_button_pressed.bind(kb))
+		
+		kb.set_keyword(word)
+		kb.button.pressed.connect(_on_keyword_button_pressed.bind(kb))
 		words_available[word] = kb
 
-func initiate_sentence_chunk_buttons():
+func instantiate_sentence_chunk_buttons():
 	for chunk in chunk_amount:
-		var cb = preload("res://scenes/keyword_button_large.tscn").instantiate()
+		var cb : KeywordButton = preload("res://scenes/keyword_button.tscn").instantiate()
 		%SentenceContainer.add_child(cb)
-		cb.text = default_text
-		cb.pressed.connect(_on_chunkword_button_pressed.bind(cb))
+		
+		cb.button.flat = true
+		cb.set_larger_font_size(54)
+		cb.set_chunkword(default_text)
+		cb.button.pressed.connect(_on_chunkword_button_pressed.bind(cb))
 		
 		chunk_buttons = %SentenceContainer.get_children()
 		
-func _on_keyword_button_pressed(kb : Button):
-	print("pressed")
-	if !kb.flat: # Used as indicator if already used in Sentence
-		print("and not flat")
+func _on_keyword_button_pressed(kb : KeywordButton):
+	if !kb.button.flat: # Used as indicator if already used in Sentence
 		for butt in chunk_buttons:
-			if butt.text == default_text:
-				print("AND default text")
-				butt.text = kb.text
-				kb.flat = true
+			if butt.get_keyword() == default_text:
+				butt.set_chunkword(kb.get_keyword())
+				kb.button.flat = true
 				break
 
-func _on_chunkword_button_pressed(cb : Button):
-	words_available[cb.text].flat = false # Resets the originally pressed button's availability
-	cb.text = default_text
-	
+func _on_chunkword_button_pressed(cb : KeywordButton):
+	words_available[cb.get_keyword()].button.flat = false # Resets the originally pressed button's availability
+	cb.set_chunkword(default_text)
 
 func _on_submit_button_pressed() -> void:
 	if check_sentence_completed():
@@ -54,7 +53,7 @@ func _on_submit_button_pressed() -> void:
 	
 func check_sentence_completed() -> bool:
 	for button in chunk_buttons:
-		if button.text == default_text:
+		if button.get_keyword() == default_text:
 			final_sentence = ""
 			return false # WRONG!!! Try again
 			
@@ -66,6 +65,6 @@ func check_sentence_completed() -> bool:
 
 func _on_reset_button_pressed() -> void:
 	for word in words_available.values():
-		word.flat = false
+		word.button.flat = false
 	for button in chunk_buttons:
-		button.text = default_text
+		button.set_chunkword(default_text)

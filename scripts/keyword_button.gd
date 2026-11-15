@@ -1,20 +1,27 @@
-extends Button
+extends MarginContainer
 class_name KeywordButton
 
-#var already_in_use = false
-#signal pressed_arg
-#
-#func _init(keyword : String) -> void:
-	#text = keyword
-#
-#func _on_pressed_arg():
-	#pressed.connect(_on_pressed_arg.bind(text))
-#
-#func _on_pressed() -> void:
-	#if !already_in_use:
-		#flat = true
-		#already_in_use = true
-		#
-#func reset():
-	#already_in_use = false
-	#flat = false
+@onready var button : Button = %KeywordButton
+@onready var label : RichTextLabel = %Label
+
+func get_keyword() -> String:
+	var keyword : String = label.text
+	print("Old: " + keyword)
+	keyword = keyword.trim_prefix("[u][i]   ")
+	keyword = keyword.trim_suffix("   [/i][/u]")
+	print("New: " + keyword)
+	return keyword
+
+func set_keyword(new_text : String):
+	label.text = new_text
+
+func set_chunkword(new_text : String):
+	label.text = "[u][i]   " + new_text + "   [/i][/u]"
+
+
+func set_larger_font_size(size : int):
+	label.add_theme_font_size_override("font_size", size)
+	label.add_theme_font_size_override("bold_font_size", size)
+
+
+# do default text stuff here instead of in the menu maybe
