@@ -4,10 +4,12 @@
 
 [sub_resource type="SystemFont" id="SystemFont_2y8ag"]
 font_names = PackedStringArray("Carlito")
+subpixel_positioning = 0
 
 [node name="KeywordButton" type="Button" unique_id=137107906]
 theme_override_fonts/font = SubResource("SystemFont_2y8ag")
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 25
+text = "HI"
 script = ExtResource("1_u81r1")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

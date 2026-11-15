@@ -2,17 +2,27 @@
 
 [ext_resource type="Script" uid="uid://ctuwilgao2tao" path="res://scripts/test_scene.gd" id="1_uecpb"]
 
-[node name="Textbox" type="Node2D" unique_id=1386576985]
+[node name="Textbox" type="Control" unique_id=1835139193]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_uecpb")
 
-[node name="StealButton" type="Button" parent="." unique_id=399491111]
+[node name="Canvas" type="CanvasLayer" parent="." unique_id=891404447]
 unique_name_in_owner = true
-offset_left = 43.0
-offset_top = 535.0
-offset_right = 93.0
-offset_bottom = 589.0
+layer = 2
+
+[node name="StealButton" type="Button" parent="Canvas" unique_id=399491111]
+unique_name_in_owner = true
+offset_left = 31.0
+offset_top = 564.0
+offset_right = 81.0
+offset_bottom = 618.0
 toggle_mode = true
 text = "Steal 
 Word"
 
-[connection signal="toggled" from="StealButton" to="." method="_on_steal_button_toggled"]
+[connection signal="toggled" from="Canvas/StealButton" to="." method="_on_steal_button_toggled"]

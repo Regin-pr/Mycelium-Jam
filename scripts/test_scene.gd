@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 func _ready() -> void:
 	Dialogic.signal_event.connect(receive_signal)
@@ -20,4 +20,4 @@ func receive_signal(argument : String):
 	match argument:
 		"scramble_01":
 			var sc01 = preload("res://scenes/word_scramble_menu.tscn").instantiate()
-			add_child(sc01)
+			%Canvas.add_child(sc01)

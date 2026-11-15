@@ -2,6 +2,7 @@
 # #
 # #context: mc meets an old friend of the host (Eugenia aka Gena), trying to catch up after host returned from their 6 years abroad
 # #
+audio music "res://audio/atmos/atmos_city.mp3"
 You see a frail-looking human frantically approaching you, seemingly intending to initiate "conversation".
 
 join Eugenia center
@@ -22,8 +23,6 @@ label FirstReply
 [b][i]You can NOT afford to be discovered, lest you want your short existence in human society to end prematurely, yet you don't quite know how to speak human language yet.[/i][/b]
 
 [b][i]Maybe you can use the words the human was saying to your advantage by memorizing them and then repeating them back to them…[/i][/b]
-
-(word scramble menu)
 [signal arg="scramble_01"]
 [wait_input]
 if {Sentence_Value} < 5.0:
