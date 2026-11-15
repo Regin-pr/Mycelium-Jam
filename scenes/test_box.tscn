@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://de3bwmc3f2i5n"]
 
 [ext_resource type="Script" uid="uid://ctuwilgao2tao" path="res://scripts/test_scene.gd" id="1_uecpb"]
+[ext_resource type="VideoStream" uid="uid://b7cibjnc7wrq" path="res://videos/copy_25E83224-EF41-4FC7-8936-3346F6D2C760.ogv" id="2_raltb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2y8ag"]
 
@@ -56,6 +57,7 @@ layer = 2
 
 [node name="DayLabel" type="Label" parent="Canvas" unique_id=298312342]
 unique_name_in_owner = true
+visible = false
 offset_left = 45.0
 offset_top = 28.0
 offset_right = 142.0
@@ -65,6 +67,7 @@ text = "Day 1"
 
 [node name="StealButton" type="Button" parent="Canvas" unique_id=399491111]
 unique_name_in_owner = true
+visible = false
 z_index = 10
 offset_left = 31.0
 offset_top = 564.0
@@ -76,11 +79,13 @@ Word"
 
 [node name="StealPopup" type="MarginContainer" parent="Canvas" unique_id=1019354434]
 unique_name_in_owner = true
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 160
 theme_override_constants/margin_top = 200
 theme_override_constants/margin_right = 160
@@ -110,18 +115,6 @@ size_flags_vertical = 3
 alignment = 1
 last_wrap_alignment = 2
 
-[node name="Button" type="Button" parent="Canvas/StealPopup/VBoxContainer/PanelContainer/WordContainer" unique_id=935907574]
-layout_mode = 2
-text = "HIII"
-
-[node name="Button2" type="Button" parent="Canvas/StealPopup/VBoxContainer/PanelContainer/WordContainer" unique_id=212161390]
-layout_mode = 2
-text = "HIII"
-
-[node name="Button3" type="Button" parent="Canvas/StealPopup/VBoxContainer/PanelContainer/WordContainer" unique_id=105127856]
-layout_mode = 2
-text = "HIII"
-
 [node name="UsesLabel" type="Label" parent="Canvas/StealPopup/VBoxContainer" unique_id=1672464795]
 unique_name_in_owner = true
 layout_mode = 2
@@ -131,4 +124,18 @@ text = "Words left for today: "
 root_node = NodePath("../Canvas/DayLabel")
 libraries/ = SubResource("AnimationLibrary_gsqoq")
 
+[node name="VideoCanvas" type="CanvasLayer" parent="." unique_id=1064762536]
+layer = 3
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="VideoCanvas" unique_id=1175105769]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_raltb")
+autoplay = true
+expand = true
+
 [connection signal="toggled" from="Canvas/StealButton" to="." method="_on_steal_button_toggled"]
+[connection signal="finished" from="VideoCanvas/VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

@@ -25,6 +25,7 @@ Vocab="*uid://bu5og6qgsvioi"
 
 directories/dch_directory={
 "Ayanda": "res://dialogue/chars/Ayanda.dch",
+"Boss": "res://dialogue/chars/Boss.dch",
 "Chrys": "res://dialogue/chars/Chrys.dch",
 "Eugenia": "res://dialogue/chars/Eugenia.dch",
 "Yeo_Ji": "res://dialogue/chars/Yeo_Ji.dch",
@@ -100,6 +101,7 @@ audio/channel_defaults={
 [display]
 
 window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="uid://b7840lilj204n"
 
 [editor_plugins]
 

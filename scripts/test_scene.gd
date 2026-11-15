@@ -13,22 +13,46 @@ func _input(event: InputEvent):
 	if Dialogic.current_timeline != null:
 		return
 
-	if event is InputEventKey and event.is_action_pressed("text_advance"):
-		Dialogic.start('day_1')
-		get_viewport().set_input_as_handled() 
-		
-		anim.play("show_day")
+	#if intro_finished and event is InputEventKey and event.is_action_pressed("text_advance"):
+		#Dialogic.start('day_1')
+		#get_viewport().set_input_as_handled() 
+		#
+		#anim.play("show_day")
 
 func _on_steal_button_toggled(toggled_on: bool) -> void:
 	if !toggled_on:
 		%StealPopup.visible = true
-		for keyword in Dialogic.KEYWORDS:
-			if keyword != "":
-				var sb : KeywordButton = preload("res://scenes/keyword_button.tscn").instantiate()
-				%WordContainer.add_child(sb)
+		
+		var sb1 : KeywordButton = preload("res://scenes/keyword_button.tscn").instantiate()
+		%WordContainer.add_child(sb1)
 			
-				sb.set_keyword(keyword)
-				sb.button.pressed.connect(_on_stealword_button_pressed.bind(sb))
+		sb1.set_keyword(Dialogic.VAR.KEYWORDS.keyword1)
+		sb1.button.pressed.connect(_on_stealword_button_pressed.bind(sb1))
+		
+		
+		var sb2 : KeywordButton = preload("res://scenes/keyword_button.tscn").instantiate()
+		%WordContainer.add_child(sb2)
+			
+		sb2.set_keyword(Dialogic.VAR.KEYWORDS.keyword2)
+		sb2.button.pressed.connect(_on_stealword_button_pressed.bind(sb2))
+		
+		
+		var sb3 : KeywordButton = preload("res://scenes/keyword_button.tscn").instantiate()
+		%WordContainer.add_child(sb3)
+			
+		sb3.set_keyword(Dialogic.VAR.KEYWORDS.keyword3)
+		sb3.button.pressed.connect(_on_stealword_button_pressed.bind(sb3))
+		
+		
+		
+		
+		#for keyword in Dialogic.VAR.KEYWORDS.keyword1:
+			#if keyword != "":
+				#var sb : KeywordButton = preload("res://scenes/keyword_button.tscn").instantiate()
+				#%WordContainer.add_child(sb)
+			#
+				#sb.set_keyword(keyword)
+				#sb.button.pressed.connect(_on_stealword_button_pressed.bind(sb))
 	else:
 		%StealPopup.visible = false
 
@@ -75,3 +99,8 @@ func receive_signal(argument : String):
 
 func update_uses_label():
 	%UsesLabel.text= "Words left for today: " + str(uses_for_the_day)
+
+func _on_video_stream_player_finished() -> void:
+	$VideoCanvas/VideoStreamPlayer.queue_free()
+	Dialogic.start('day_0')
+	get_viewport().set_input_as_handled() 

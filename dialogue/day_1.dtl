@@ -3,6 +3,8 @@
 # #context: mc meets an old friend of the host (Eugenia aka Gena), trying to catch up after host returned from their 6 years abroad
 # #
 audio music "res://audio/atmos/atmos_city.mp3"
+[background arg="res://sprites/backgrounds/_1/BG_Eugenia_1.png" fade="0.0"]
+
 You see a frail-looking human frantically approaching you, seemingly intending to initiate "conversation".
 
 join Eugenia center
