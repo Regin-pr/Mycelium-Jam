@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://b0gri3gsvyk4m"]
 
 [ext_resource type="Script" uid="uid://ckirrjl5f0djg" path="res://scripts/word_scramble_menu.gd" id="1_37lb8"]
+[ext_resource type="Texture2D" uid="uid://dr2dy635aig6w" path="res://stuff/BG_Overlay.png" id="2_5qa5a"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2y8ag"]
-bg_color = Color(0.2050541, 0.24314997, 0.19122022, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_37lb8"]
+texture = ExtResource("2_5qa5a")
 
 [node name="WordScrambleMenu" type="Control" unique_id=793688795]
 layout_mode = 3
@@ -56,7 +57,7 @@ custom_minimum_size = Vector2(700, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_2y8ag")
+theme_override_styles/panel = SubResource("StyleBoxTexture_37lb8")
 
 [node name="SentenceContainer" type="HFlowContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/PanelContainer" unique_id=1083512002]
 unique_name_in_owner = true

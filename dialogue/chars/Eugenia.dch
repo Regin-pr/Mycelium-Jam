@@ -11,9 +11,9 @@
 "mode": 0,
 "name": "Mood 1",
 "pitch_base": 1.0,
-"pitch_variance": 0.0,
+"pitch_variance": 0.1,
 "skip_characters": 0.0,
-"sound_path": "",
+"sound_path": "res://audio/char_sounds/eugenia/",
 "volume_base": 0.0,
 "volume_variance": 0.0
 }
