@@ -37,10 +37,13 @@ directories/dtl_directory={
 "day_2": "res://dialogue/day_2.dtl",
 "timelines/test_timeline": "res://dialogue/timelines/test_timeline.dtl"
 }
-layout/style_directory={}
+layout/style_directory={
+"": "res://stuff/textbox_style.tres",
+"textbox_style": "res://stuff/textbox_style.tres"
+}
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://stuff/textbox_style.tres"]
+layout/default_style="res://stuff/textbox_style.tres"
 variables={
 "Ayanda_Name": "???",
 "Chrys_Name": "???",

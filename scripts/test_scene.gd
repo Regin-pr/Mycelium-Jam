@@ -49,6 +49,9 @@ func receive_signal(argument : String):
 			var sc01 = preload("res://scenes/word_scramble_menu.tscn").instantiate()
 			%Canvas.add_child(sc01)
 		"scene_1_trans":
+			Globals.day = 1
+			uses_for_the_day = 4
+			
 			Dialogic.start('day_1')
 			get_viewport().set_input_as_handled() 
 		"scene_2_trans":
@@ -59,10 +62,14 @@ func receive_signal(argument : String):
 			get_viewport().set_input_as_handled()
 		"scene_3_trans":
 			Globals.day = 3
+			uses_for_the_day = 4
+
 			Dialogic.start('day_3')
 			get_viewport().set_input_as_handled()
 		"scene_4_trans":
-			Globals.day = 2
+			Globals.day = 4
+			uses_for_the_day = 4
+			
 			Dialogic.start('day_4')
 			get_viewport().set_input_as_handled()
 

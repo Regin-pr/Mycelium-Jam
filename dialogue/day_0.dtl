@@ -1,2 +1,22 @@
-[background arg="res://sprites/backgrounds/_0/BG_Scene_1.png" fade="0.0"]
-[background arg="res://sprites/backgrounds/_0/BG_Scene_2.png" fade="0.0"]
+[background arg="res://sprites/backgrounds/_0/BG_Scene_1.png" fade="0.5"]
+You were successful.
+
+This vessel is now yours to wield.
+
+But it is no easy task, the others in the hive told you so numerous times.
+
+You don't heed their warnings.
+
+Instead, you lift your new body off the ground and stumble as you try to get ahold of how complex movement is.
+
+Finally, you start heading in the direction your host knows best.
+
+[background arg="res://sprites/backgrounds/_0/BG_Scene_3.png" fade="0.5"]
+
+You have almost made it.
+
+Made it out of this pitiful existence without purpose.
+
+Made it out of home and into the unknown.
+
+[signal arg="scene_1_trans"]

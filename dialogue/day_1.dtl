@@ -53,6 +53,3 @@ Eugenia (looking_right): I suppose I'll see you some other time, Meade?
 
 set {Scores.Total_Score} = {Scores.Total_Score} + {Scores.Eugenia_Score}
 [signal arg="scene_2_trans"]
-if {Scores.Yeo_Ji_Score} < 10.0:
-	Yeo_Ji (Open Mouth): Sorry, but no.
-	[end_timeline]
