@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tuainohgc2us"
-path="res://.godot/imported/Eugenia_looking_at_player.png-af00b40e5b8f53a130bf4ba0aab517f5.ctex"
+uid="uid://t6ppciwusjrt"
+path="res://.godot/imported/Eugenia_looking_right_mouth_open.png-196019b0832195ea68b6731a2b1e9757.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/eugenia/Eugenia_looking_at_player.png"
-dest_files=["res://.godot/imported/Eugenia_looking_at_player.png-af00b40e5b8f53a130bf4ba0aab517f5.ctex"]
+source_file="res://sprites/characters/eugenia/Eugenia_looking_right_mouth_open.png"
+dest_files=["res://.godot/imported/Eugenia_looking_right_mouth_open.png-196019b0832195ea68b6731a2b1e9757.ctex"]
 
 [params]
 

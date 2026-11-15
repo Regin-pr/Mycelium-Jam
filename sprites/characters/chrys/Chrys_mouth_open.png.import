@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cinfrpeigjl2k"
-path="res://.godot/imported/Ayanda_looking_right.png-1b9a1f05c8bdbeb4655c8888f056dd77.ctex"
+uid="uid://360564bfkysc"
+path="res://.godot/imported/Chrys_mouth_open.png-e2fb534d97ad3ed06ec73e9c1ba0935a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ayanda/Ayanda_looking_right.png"
-dest_files=["res://.godot/imported/Ayanda_looking_right.png-1b9a1f05c8bdbeb4655c8888f056dd77.ctex"]
+source_file="res://sprites/characters/chrys/Chrys_mouth_open.png"
+dest_files=["res://.godot/imported/Chrys_mouth_open.png-e2fb534d97ad3ed06ec73e9c1ba0935a.ctex"]
 
 [params]
 

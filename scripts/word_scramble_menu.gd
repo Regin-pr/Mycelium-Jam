@@ -9,12 +9,12 @@ var chunk_amount = 5
 var chunk_buttons : Array
 
 var character_liked_words : Array
+var character_disliked_words : Array
 
 func _ready() -> void:
 	## CODE TO REPLACE FOR EACH WINDOW
-	chunk_amount = 5
-	character_liked_words = Vocab.characters_liked_words[0]
-
+	character_liked_words = Vocab.characters_liked_words[Globals.day - 1]
+	character_liked_words = Vocab.characters_liked_words[Globals.day - 1]
 	
 	instantiate_available_keyword_buttons()
 	instantiate_sentence_chunk_buttons()
@@ -67,6 +67,9 @@ func check_sentence_completed() -> bool:
 		for word in character_liked_words:
 			if word == chunk.get_keyword():
 				Dialogic.VAR.Sentence_Score += 5
+		for word in character_disliked_words:
+			if word == chunk.get_keyword():
+				Dialogic.VAR.Sentence_Score -= 2
 		final_sentence += chunk.get_keyword() # If valid
 		
 	print(Dialogic.VAR.Sentence_Score)

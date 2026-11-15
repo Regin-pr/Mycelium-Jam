@@ -2,10 +2,11 @@ extends Control
 
 @onready var anim = $AnimationPlayer
 
-var uses_for_the_day = 3
+var uses_for_the_day = 4
 
 func _ready() -> void:
 	Dialogic.signal_event.connect(receive_signal)
+	update_uses_label()
 
 func _input(event: InputEvent):
 	# check if a dialog is already running
@@ -32,10 +33,11 @@ func _on_steal_button_toggled(toggled_on: bool) -> void:
 		%StealPopup.visible = false
 
 func _on_stealword_button_pressed(sb : KeywordButton):
-	if !sb.button.flat:
+	if !sb.button.flat and uses_for_the_day > 0:
 		Vocab.words.append(sb.get_keyword())
 		sb.button.flat = true
-		# -1 uses
+		uses_for_the_day -= 1
+		update_uses_label()
 
 func receive_signal(argument : String):
 	match argument:
@@ -46,12 +48,23 @@ func receive_signal(argument : String):
 			Dialogic.paused = true
 			var sc01 = preload("res://scenes/word_scramble_menu.tscn").instantiate()
 			%Canvas.add_child(sc01)
+		"scene_1_trans":
+			Dialogic.start('day_1')
+			get_viewport().set_input_as_handled() 
 		"scene_2_trans":
+			Globals.day = 2
+			uses_for_the_day = 4
+			
 			Dialogic.start('day_2')
 			get_viewport().set_input_as_handled()
 		"scene_3_trans":
+			Globals.day = 3
 			Dialogic.start('day_3')
 			get_viewport().set_input_as_handled()
 		"scene_4_trans":
+			Globals.day = 2
 			Dialogic.start('day_4')
 			get_viewport().set_input_as_handled()
+
+func update_uses_label():
+	%UsesLabel.text= "Words left for today: " + str(uses_for_the_day)

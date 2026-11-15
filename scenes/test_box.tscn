@@ -54,8 +54,18 @@ script = ExtResource("1_uecpb")
 unique_name_in_owner = true
 layer = 2
 
+[node name="DayLabel" type="Label" parent="Canvas" unique_id=298312342]
+unique_name_in_owner = true
+offset_left = 45.0
+offset_top = 28.0
+offset_right = 142.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 36
+text = "Day 1"
+
 [node name="StealButton" type="Button" parent="Canvas" unique_id=399491111]
 unique_name_in_owner = true
+z_index = 10
 offset_left = 31.0
 offset_top = 564.0
 offset_right = 81.0
@@ -78,7 +88,7 @@ theme_override_constants/margin_bottom = 200
 
 [node name="ColorRect" type="ColorRect" parent="Canvas/StealPopup" unique_id=667285305]
 layout_mode = 2
-color = Color(0.51, 0.51, 0.51, 0.85882354)
+color = Color(0.6288591, 0.67221284, 0.7069469, 0.85882354)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Canvas/StealPopup" unique_id=2027917333]
 layout_mode = 2
@@ -112,22 +122,13 @@ text = "HIII"
 layout_mode = 2
 text = "HIII"
 
-[node name="Label2" type="Label" parent="Canvas/StealPopup/VBoxContainer" unique_id=1672464795]
+[node name="UsesLabel" type="Label" parent="Canvas/StealPopup/VBoxContainer" unique_id=1672464795]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Words left for today: "
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2136676682]
-root_node = NodePath("../DayLabel")
+root_node = NodePath("../Canvas/DayLabel")
 libraries/ = SubResource("AnimationLibrary_gsqoq")
-
-[node name="DayLabel" type="Label" parent="." unique_id=298312342]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 45.0
-offset_top = 28.0
-offset_right = 88.0
-offset_bottom = 51.0
-theme_override_font_sizes/font_size = 36
-text = "Day 1"
 
 [connection signal="toggled" from="Canvas/StealButton" to="." method="_on_steal_button_toggled"]

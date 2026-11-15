@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddauc0qrucvtw"
-path="res://.godot/imported/Yeo-Ji_closed_mouth.png-901b9b6ef7c9765e21fe999aa3f9b668.ctex"
+uid="uid://hlu7m8ho0fnn"
+path="res://.godot/imported/Yeo-Ji_open_mouth.png-3591168ca57908b95226752bddb79784.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/yeo-ji/Yeo-Ji_closed_mouth.png"
-dest_files=["res://.godot/imported/Yeo-Ji_closed_mouth.png-901b9b6ef7c9765e21fe999aa3f9b668.ctex"]
+source_file="res://sprites/characters/yeo-ji/Yeo-Ji_open_mouth.png"
+dest_files=["res://.godot/imported/Yeo-Ji_open_mouth.png-3591168ca57908b95226752bddb79784.ctex"]
 
 [params]
 

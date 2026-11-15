@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xsnfydrtj6ir"
-path="res://.godot/imported/Ayanda_shocked.png-78b598453435a25442a11802b8fb29ed.ctex"
+uid="uid://dxdijl4iggxco"
+path="res://.godot/imported/Ayanda_eyes_closed.png-6d06c697f6a46731c4eafdd65f937b96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ayanda/Ayanda_shocked.png"
-dest_files=["res://.godot/imported/Ayanda_shocked.png-78b598453435a25442a11802b8fb29ed.ctex"]
+source_file="res://sprites/characters/ayanda/Ayanda_eyes_closed.png"
+dest_files=["res://.godot/imported/Ayanda_eyes_closed.png-6d06c697f6a46731c4eafdd65f937b96.ctex"]
 
 [params]
 
