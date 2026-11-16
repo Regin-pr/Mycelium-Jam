@@ -9,7 +9,7 @@ You see a frail-looking human frantically approaching you, seemingly intending t
 
 join Eugenia center
 
-Eugenia (surprised): Meade?[pause=0.5] Oh my God, [color=FIREBRICK][i]Meade[/i][/color], is that you, choom?[pause=0.2] It's me, [color=FIREBRICK][i]Eugenia[/i][/color]! From [color=FIREBRICK][i]high school[/i][/color], [color=FIREBRICK][i]remember[/i][/color]?
+Eugenia (surprised): Meade?[pause=0.5] Oh my God, [color=FIREBRICK][i]Meade[/i][/color], is that you, choom?[pause=0.2] It's me, [color=FIREBRICK][i]Eugenia[/i][/color] ! From [color=FIREBRICK][i]high school[/i][/color], [color=FIREBRICK][i]remember[/i][/color]?
 
 set {Eugenia_Name} = "Eugenia"
 ...
@@ -26,26 +26,41 @@ label FirstReply
 
 [b][i]Maybe you can use the words the human was saying to your advantage by memorizing them and then repeating them back to them…[/i][/b]
 
-[signal arg="scramble_01"]
+[signal arg="scramble"]
 
 
-if {Sentence_Score} < 5.0:
+if {Sentence_Score} < 10.0:
 	
 	Eugenia (surprised): Huh? What?
 	
 	jump FirstReply
-elif {Sentence_Score} > 10.0:
-	set {Sentence_Score} = 10.0
+#elif {Sentence_Score} > 20.0:
+#	set {Sentence_Score} = 10.0
 
-set {Scores.Eugenia_Score} = {Scores.Eugenia_Score} + max(10,{Sentence_Score})
+set {Scores.Eugenia_Score} = {Scores.Eugenia_Score} {Sentence_Score}
 set {Sentence_Score} = 0
 
+[signal arg="steal_appear"]
+do Vocab.append_stealword_queue("language")
 
 Eugenia (looking_right): Ok so it seems like you do remember me, but not the [color=FIREBRICK][i]language[/i][/color] we're speaking…[pause=0.5]
-[signal arg="steal_appear"]
+
+do Vocab.append_stealword_queue("6 years abroad")
+do Vocab.append_stealword_queue("forget")
+do Vocab.append_stealword_queue("speak")
+
 
 Eugenia (surprised): Did those [color=FIREBRICK][i]6 years abroad[/i][/color] really make you [color=FIREBRICK][i]forget[/i][/color] how to [color=FIREBRICK][i]speak[/i][/color] our language that much?
+
+do Vocab.append_stealword_queue("yes")
+do Vocab.append_stealword_queue("understand")
+
 Eugenia (surprised): I mean, [color=FIREBRICK][i]yes[/i][/color], I [color=FIREBRICK][i]understand[/i][/color], being in a foreign country for that long without speaking your native tongue might degrade your skills over time but yikes… [pause=1]
+
+do Vocab.append_stealword_queue("Gena")
+do Vocab.append_stealword_queue("memories")
+
+
 Eugenia (looking_at_player): I guess ol' [color=FIREBRICK][i]Gena[/i][/color] will have to refresh the [color=FIREBRICK][i]memories[/i][/color] trapped in that noggin of yours, choom!
 
 Eugenia (surprised): Dang, I need to hurry back to work, didn't realize I spent most of my break talking to you.

@@ -15,7 +15,7 @@
 &"display_name": "Chrys",
 &"mirror": false,
 &"nicknames": [""],
-&"offset": Vector2(0, 0),
+&"offset": Vector2(0, 350),
 &"portraits": {
 "Looking At Player": {
 "export_overrides": {
@@ -54,5 +54,5 @@
 "scene": ""
 }
 },
-&"scale": 1.0
+&"scale": 1.5
 }

@@ -1,19 +1,29 @@
-[background arg="res://sprites/backgrounds/_1/BG_Home_night.png" fade="2.5"]
+[background arg="res://sprites/backgrounds/_1/BG_Home_night.png" fade="3.5"]
 audio music "res://audio/atmos/atmos_nature.mp3" [fade="2.5" volume="-17.0"]
+[wait time="1.0"]
 
 
-Your body shudders awake, disturbed by an agonizingly shrill sound coming from a rectangular box that has been sitting in a pouch on your leg. Desperately wanting the noise to come to a stop, you fish out the object from your pouch with your limbs. Said object glows with a blindingly bright light, showing a picture of a person and two crescent-shaped symbols, one green, the other red.
+Your body shudders awake, disturbed by an agonizingly shrill sound coming from a rectangular box that has been sitting in a pouch on your leg.
 
-As if moved by a ghastly echo of your host's will, one of 10 spindly appendages you have been using to interact with the world thus far glides over to the green shape, causing the entire picture to shift and a different noise to blare out of the box.[pause=1] This time, it sounds human.
+Desperately wanting the noise to come to a stop, you fish out the object from your pouch with your limbs.
+
+Said object glows with a blindingly bright light, showing a picture of a person and two crescent-shaped symbols, one green, the other red.
+
+As if moved by a ghastly echo of your host's will, one of 10 spindly appendages you have been using to interact with the world thus far glides over to the green shape,
+
+causing the entire picture to shift and a different noise to blare out of the box.[pause=1] This time, it sounds human.
 
 join Boss center
+
+do Vocab.append_stealword_queue("excuse")
+
 Boss: Cellio! Where the hell have you been? Your 6 years abroad do not give you the [color=FIREBRICK][i]excuse[/i][/color] to slack off, ya hear me?! If you aren't here within the next 30 minutes, you're fired!
 
 leave Boss
 
 For whatever reason, upon hearing this, your body starts pumping out adrenaline and induces a great discomfort in you.
 
-You should probably do as the voice says and move to… [pause=1] "[color=FIREBRICK][i]Work[/i][/color]"? At least that's the first word that comes to mind when thinking about that voice and its demands.
+You should probably do as the voice says and move to… [pause=1] "[color=PURPLE][i]Work[/i][/color]"? At least that's the first word that comes to mind when thinking about that voice and its demands.
 
 The device emits one final sound before shutting off and going dark, only leaving you with a reflection of the human this box once belonged to staring back at you.
 
@@ -21,43 +31,59 @@ The device emits one final sound before shutting off and going dark, only leavin
 
 [background arg="res://sprites/backgrounds/_1/BG_Yeoji_1.png" fade="2.5"]
 audio music "res://audio/atmos/atmos_bus.mp3" [fade="2.5" volume="-7.0"]
+[wait time="1.0"]
 
 join Yeo_Ji center
 
-Yeo-Ji: Ah, it's you. You're late.
+Yeo_Ji: Ah, it's you. You're late.
 
 The humanoid with an unusual amount of appendages does not even turn to face you, something that other humans have been doing without fault when interacting with you.
 
-[signal arg="scramble_02"]
-
-if {Sentence_Score} < 10.0:
-
+[signal arg="scramble"]
 
 set {Scores.Yeo_Ji_Score} = {Scores.Yeo_Ji_Score} + max(10,{Sentence_Score})
 set {Sentence_Score} = 0
 
-Yeo-Ji (open mouth): Tch. Why do I even bother…
+if {Sentence_Score} < 10.0:
+	
+	Yeo_Ji (open mouth): Tch. Why do I even bother…
+	
+	She continues using her 6 limbs to continue her activities more efficiently than you could ever hope to be with your husk of a body, not paying you any mind anymore.
+	
+	jump endConvo
 
-She continues using her 6 limbs to continue her activities more efficiently than you could ever hope to be with your husk of a body, not paying you any mind anymore.
+do Vocab.append_stealword_queue("others")
 
-jump endConvo
+Yeo_Ji (open mouth): Wow, barely coherent but that's more than I get from [color=FIREBRICK][i]others[/i][/color].
 
-Yeo-Ji (open mouth): Wow, barely coherent but that's more than I get from [color=FIREBRICK][i]others[/i][/color].
+Yeo_Ji (closed mouth): Clocking in and out like this, over and over again, it makes you think, hm?[pause=0.5]
 
-Yeo-Ji (closed mouth): Clocking in and out like this, over and over again, it makes you think, hm?[pause=0.5] What even is the point?[pause=0.5] I mean, sure, I like organizing things neatly and all but this job has been so mind-numbing and eroding my [color=FIREBRICK][i]sense of self[/i][/color], I barely even do anything besides organize, organize, organize anymore.
+do Vocab.append_stealword_queue("sense of self")
 
-Yeo-Ji (open mouth): It gets to a point, you know? When you do something you enjoy to [color=FIREBRICK][i]exhaustion[/i][/color], it stops being enjoyable.
+Yeo_Ji (Closed Mouth): What even is the point?[pause=0.5] I mean, sure, I like organizing things neatly and all but this job has been so mind-numbing and eroding my [color=FIREBRICK][i]sense of self[/i][/color],
 
-Yeo-Ji (closed mouth): sigh Sorry for laying all of this on you on a busy work day, Meade, I just seriously need a break from it all and actually… live, as [color=FIREBRICK][i]Yeo-Ji[/i][/color], you know? Not as just another office worker…
+Yeo_Ji (Closed Mouth): I barely even do anything besides organize, organize, organize anymore.
+
+do Vocab.append_stealword_queue("exhaustion")
+
+Yeo_Ji (open mouth): It gets to a point, you know? When you do something you enjoy to [color=FIREBRICK][i]exhaustion[/i][/color], it stops being enjoyable.
+
+do Vocab.append_stealword_queue("Yeo-Ji")
+
+Yeo_Ji (closed mouth): (sigh) Sorry for laying all of this on you on a busy work day, Meade, I just seriously need a break from it all and actually… live, as [color=FIREBRICK][i]Yeo-Ji[/i][/color], you know? Not as just another office worker…
 
 Yeo-Ji's prolonged silence indicates she is finished conversing with you, leaving you to it.
+
+leave Yeo_Ji
+
+[wait time="1.0"]
 
 label endConvo
 
 This prompts you to leave, heading towards your designated, isolated space, doing whatever the host was presumably doing before you took over, seemingly guided by pure instinct forged by repetition.
+[background arg="res://sprites/backgrounds/_1/BG_Home_1.png" fade="2.5"]
 
 Afterwards you head home, seemingly having completed your obligations for the day.
 
-bg=mc home
 set {Scores.Total_Score} = {Scores.Total_Score} + {Scores.Yeo_Ji_Score}
 [signal arg="scene_3_trans"]

@@ -14,6 +14,8 @@ var chrys_dislikes
 var ayanda_dislikes
 var characters_disliked_words
 
+var stealword_queue = ["", "", ""]
+
 # 5 words, two have to be to her liking to get max points (10)
 # ___ ___ ___ ___ ___
 # hi  Eugenia  I  remember  high school     :)
@@ -39,3 +41,19 @@ func getWord(i: int) -> String:
 func _process(delta: float) -> void:
 	#print(getWord(0))
 	pass
+
+func append_stealword_queue(stealword : String):
+	stealword_queue[0] = stealword_queue[1]
+	stealword_queue[1] = stealword_queue[2]
+	stealword_queue[2] = stealword
+
+func update_stealword_queue(index : int):
+	while index > 0:
+		stealword_queue[index] = stealword_queue[index - 1]
+		stealword_queue[index - 1] = ""
+		index -= 1
+		
+	stealword_queue[0] = ""
+
+func empty_steal_queue():
+	stealword_queue = ["", "", ""]

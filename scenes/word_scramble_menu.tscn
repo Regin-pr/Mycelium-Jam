@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b0gri3gsvyk4m"]
 
 [ext_resource type="Script" uid="uid://ckirrjl5f0djg" path="res://scripts/word_scramble_menu.gd" id="1_37lb8"]
-[ext_resource type="Texture2D" uid="uid://dr2dy635aig6w" path="res://stuff/BG_Overlay.png" id="2_5qa5a"]
+[ext_resource type="Texture2D" uid="uid://dr2dy635aig6w" path="res://sprites/ui/BG_Overlay.png" id="2_5qa5a"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_37lb8"]
 texture = ExtResource("2_5qa5a")

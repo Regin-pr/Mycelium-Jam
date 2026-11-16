@@ -1,0 +1,6 @@
+[gd_resource type="SystemFont" format=3 uid="uid://bfhxgmeokiw1j"]
+
+[resource]
+font_names = PackedStringArray("Candara")
+font_italic = true
+font_weight = 800
