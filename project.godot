@@ -10,10 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Mycelium Jam"
+config/name="Soft Spores"
 run/main_scene="uid://de3bwmc3f2i5n"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://caiuotvubde7h"
+
+[audio]
+
+general/default_playback_type.web=0
 
 [autoload]
 
